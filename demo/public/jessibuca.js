@@ -10820,7 +10820,9 @@
         }
 
         if (this.sourceBuffer.updating === false && this.isStateOpen) {
-          this.sourceBuffer.appendBuffer(buffer);
+            if(this.sourceBuffer.appendBuffer!=null){
+                this.sourceBuffer.appendBuffer(buffer);
+            }
           return;
         }
 
